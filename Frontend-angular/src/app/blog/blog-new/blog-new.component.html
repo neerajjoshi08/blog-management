@@ -1,0 +1,22 @@
+<div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" id="title" placeholder="Title of the blog" [(ngModel)]="blog.blogTitle">
+</div>
+<div class="mb-3">
+    <label for="category" class="form-label">Title</label>
+    <input type="text" class="form-control" id="category" placeholder="Category of the blog" [(ngModel)]="blog.blogCategory">
+</div>
+<div class="mb-3">
+    <label for="content" class="form-label">Content</label>
+    <textarea class="form-control" id="content" rows="8" placeholder="Content of the blog"
+        [(ngModel)]="blog.blogContent"></textarea>
+</div>
+
+<div class="row my-3">
+    <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+        <button class="btn btn-success" (click)="onSubmit()"><i class="fa fa-check mx-2 p-0"></i>Submit</button>
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+        <button class="btn btn-danger" (click)="onCancel()"><i class="fa fa-times mx-2 p-0"></i>Cancel</button>
+    </div>
+</div>

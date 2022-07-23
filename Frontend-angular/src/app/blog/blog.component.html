@@ -1,0 +1,48 @@
+<div class="row my-3">
+    <div class="col-md-12 text-end">
+        <button class="btn btn-secondary" (click)="newBlog()"><i class="fa fa-plus-square mx-2 p-0"></i>New
+            Post</button>
+    </div>
+</div>
+<div class='card'>
+    <div class='card-header'>
+        <h4>{{pageTitle}}</h4>
+    </div>
+    <div id="main" class='card-body' class="my-1 p-2" *ngFor='let blog of listOfBlogs; let i = index;'>
+        <div>
+            <div class="row">
+                <div class="col-md-12"><strong>S.No: </strong>{{ i+1 }}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-12"><strong>Title: </strong>{{ blog.blogTitle }}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-12"><strong>Category: </strong>{{ blog.blogCategory }}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"><strong>Last Modified on: </strong>{{ blog.blogModifiedDate }}</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12"><strong>Content:</strong></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>{{ blog.blogContent }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                <button class="btn btn-primary" (click)="editBlog(blog)">
+                    <i class="fa fa-edit mx-2 p-0"></i>Read/Edit</button>
+            </div>
+            <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 px-0">
+                <button class="btn btn-danger" (click)="deleteBlog(blog)">
+                    <i class="fa fa-trash mx-2 p-0"></i>Delete</button>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>

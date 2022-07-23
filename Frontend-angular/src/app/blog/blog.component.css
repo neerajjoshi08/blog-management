@@ -1,0 +1,10 @@
+
+p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#main div {
+    margin: 4px 0px;
+}
